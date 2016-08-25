@@ -1,1 +1,1 @@
-/home/eiko/conf/vim/bundle/ultisnips/ftdetect/UltiSnips.vim
+../bundle/ultisnips/ftdetect/UltiSnips.vim
