@@ -1,0 +1,31 @@
+global !p
+def complete(t,opts):
+    if t:
+        opts = [ m[len(t):] for m in opts if m.startswith(t) ]
+    if (len(opts)==1):
+        return opts[0]
+    return '(' + '|'.join(opts) + ')'
+
+# verfügbare Attributetypen 
+attribTypes=['int','long','string','keyType','boolean','date','timestamp','geoType','moneyType','mType','mmType','kmType','kmhType','prozentType','stundeType','voltType','floatType']
+endglobal
+
+
+snippet entity "Description" 
+        <entity id="$1">
+            <descr>$2</descr>
+            <name>$3</name>
+            <attribs>
+            </attribs>
+            <relDefs>
+            </relDefs> 
+        </entity>
+endsnippet
+
+snippet attrib "Description" 
+                <attrib id="$1">
+                    <name>$2</name>
+                    <type>$3`!p snip.rv=complete(t[3],attribTypes)`</type>
+                </attrib>
+endsnippet
+
