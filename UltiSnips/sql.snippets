@@ -1,0 +1,11 @@
+snippet test "Kommentar, dass es sich um Testcode handelt" b
+/* Testcode */
+
+endsnippet
+
+snippet insX "Sql insert für xslCodeGen-Tabellen" b
+/* $1, $2 */
+INSERT INTO $1 (id,${2/#//g}) VALUES (get_max_id_${1/.*_(.*)/$1/}(),${2/#([a-zA-Z0-9]*)(,?)/'$1'$2/g});
+
+endsnippet
+

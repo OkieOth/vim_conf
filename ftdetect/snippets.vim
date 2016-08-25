@@ -1,0 +1,1 @@
+/home/eiko/conf/vim/bundle/ultisnips/ftdetect/snippets.vim
