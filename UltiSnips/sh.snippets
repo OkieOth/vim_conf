@@ -2,3 +2,22 @@ snippet spos "Trägt die aktuelle die Variable für die aktuelle Scriptposition 
 scriptPos=${0%/*}
 
 endsnippet
+
+snippet bbang "Description" b
+#!/bin/bash
+
+endsnippet
+
+snippet dateVar "now string" b
+now=$(date +%y%m%d)
+
+endsnippet
+
+snippet timeVar "Description" b
+nowTime=$(date +%Y%m%d-%k%M%S)
+
+endsnippet
+
+snippet absPath "Schreibt eine Variable mit den absoluten Pfad zu einen gespeicherten relativen ermittelt" b
+$1=$(pushd $$2 > /dev/null; pwd ; popd > /dev/null)
+endsnippet
