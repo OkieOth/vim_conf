@@ -5,7 +5,20 @@ endsnippet
 
 snippet insX "Sql insert für xslCodeGen-Tabellen" b
 /* $1, $2 */
-INSERT INTO $1 (id,${2/#//g}) VALUES (get_max_id_${1/.*_(.*)/$1/}(),${2/#([a-zA-Z0-9]*)(,?)/'$1'$2/g});
+INSERT INTO $1 (id,${2/#//g}) VALUES (get_max_id_$1(),${2/#([a-zA-Z0-9]*)(,?)/'$1'$2/g});
 
+endsnippet
+
+snippet view "Erzeugt den Rumpf von Views" b
+CREATE OR REPLACE VIEW $1 AS
+SELECT
+
+FROM $2 $3
+
+WHERE
+endsnippet
+
+snippet ijoin "Rumpf für den Inner-Join"
+    INNER JOIN $1 $2 ON $2.$3=$4.$5
 endsnippet
 
