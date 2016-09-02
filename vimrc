@@ -14,17 +14,10 @@ colorscheme elflord
 
 
 map <silent> <F3> :call BufferList()<CR>
-map ic :s/^/#/g<CR>:let @/ = ""<CR>
-map rc :s/^#//g<CR>:let @/ = ""<CR>
+" not needed
+"map ic :s/^/#/g<CR>:let @/ = ""<CR>
+"map rc :s/^#//g<CR>:let @/ = ""<CR>
 
-"filetype plugin on
-"set omnifunc=syntaxcomplete#Complete
-
-" Track the engine.
-"Plugin 'SirVer/ultisnips'
-
-" Snippets are separated from the engine. Add this if you want them:
-"Plugin 'honza/vim-snippets'
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<s-tab>"
