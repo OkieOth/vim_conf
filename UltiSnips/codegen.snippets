@@ -29,3 +29,28 @@ snippet attrib "Description"
                 </attrib>
 endsnippet
 
+post_expand "snip.cursor.set(snip.line-3,13)"
+snippet query "scription" 
+    <query id="$1">
+        <descr>${2:Was}</descr>
+        <name>${3:Name}</name>
+        <attribs>
+            <attrib id="$1c0" display="false">
+                <name>id</name>
+                <type>int</type>
+            </attrib>
+            
+        </attribs>
+    </query>
+endsnippet
+
+snippet view "Description" b
+        <view id="v$1">
+            <descr>${2:Beschreibung}</descr>
+            <name>${3:Name}</name>
+            <attribs>
+                <!-- keine ID-Spalte nötig -->
+
+            </attribs>
+        </view>
+endsnippet

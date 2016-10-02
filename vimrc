@@ -11,13 +11,16 @@ colorscheme elflord
 :set nu		    "show line number
 
 :set tabstop=4 shiftwidth=4 expandtab
+:set hidden
+:set switchbuf=newtab
+
 
 
 map <silent> <F3> :call BufferList()<CR>
 map ic :s/^/#/g<CR>:let @/ = ""<CR>
 map rc :s/^#//g<CR>:let @/ = ""<CR>
 
-"filetype plugin on
+filetype plugin indent on
 "set omnifunc=syntaxcomplete#Complete
 
 " Track the engine.
@@ -33,3 +36,10 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+let notabs = 0
+nnoremap <silent> <F8> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Bar>:tab ball<Bar>:tabn<Bar>:endif<CR>
+
+    
+
+

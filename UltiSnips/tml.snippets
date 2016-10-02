@@ -1,0 +1,22 @@
+snippet msg "Message entry" 
+    ${message:$1}
+endsnippet
+
+
+snippet flyoutlnk "Link Flyouts in MainNav-Component"
+                    <li>
+                        <t:pagelink page="${1:index}"}       
+                            ${message:menu-${2:txt}}
+                        </t:pagelink>
+                    </li>
+endsnippet
+
+snippet menuflyout "Link für MainNav-Component"
+            <li class="flyout" id="${1:m1}">
+                <t:pagelink page="${2:index}">
+                    ${message:menu-${3:txt}}
+                </t:pagelink>
+                <ul class="flyout">
+                </ul>
+            </li>
+endsnippet

@@ -21,3 +21,18 @@ endsnippet
 snippet absPath "Schreibt eine Variable mit den absoluten Pfad zu einen gespeicherten relativen ermittelt" b
 $1=$(pushd $$2 > /dev/null; pwd ; popd > /dev/null)
 endsnippet
+
+snippet getopts "erzeugt eine getopts-While-Schleife" b
+while getopts ':$1' option; do
+    case $option in
+    esac
+done
+shift "$((OPTIND-1))"
+
+endsnippet
+
+snippet for_num "a for loop" b
+for elem in $(0 $1); do
+
+done
+endsnippet
