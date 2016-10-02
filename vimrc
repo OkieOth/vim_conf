@@ -17,8 +17,9 @@ colorscheme elflord
 
 
 map <silent> <F3> :call BufferList()<CR>
-map ic :s/^/#/g<CR>:let @/ = ""<CR>
-map rc :s/^#//g<CR>:let @/ = ""<CR>
+" not needed
+"map ic :s/^/#/g<CR>:let @/ = ""<CR>
+"map rc :s/^#//g<CR>:let @/ = ""<CR>
 
 filetype plugin indent on
 "set omnifunc=syntaxcomplete#Complete
