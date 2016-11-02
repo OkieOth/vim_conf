@@ -41,6 +41,16 @@ let g:UltiSnipsEditSplit="vertical"
 let notabs = 0
 nnoremap <silent> <F8> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Bar>:tab ball<Bar>:tabn<Bar>:endif<CR>
 
-    
+let delimitMate_expand_cr=1    
+
+" CtrlP - start
+" Use <leader>t to open ctrlp
+ let g:ctrlp_map = '<leader>t'
+" " Ignore these directories
+set wildignore+=*/build/**
+set wildignore+=*/target/**
+" " disable caching
+" let g:ctrlp_use_caching=0
+" CtrlP - ende
 
 
