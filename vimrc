@@ -25,8 +25,6 @@ let g:SuperTabCrMapping=1
 :nmap <c-s-h> B
 :nmap <c-l> w
 :nmap <c-s-l> W
-:nmap <c-a> ^
-:nmap <c-e> $
 :nmap <c-j> }
 :nmap <c-k> {
 
@@ -82,3 +80,6 @@ set wildignore+=*/target/**
 " allow xml format for xml files with input gg=G
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 
+let g:jsx_ext_required = 0
+
+set laststatus=2
