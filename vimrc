@@ -83,3 +83,19 @@ au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 let g:jsx_ext_required = 0
 
 set laststatus=2
+
+" typescript
+autocmd BufNewFile,BufRead *.tsx setlocal filetype=typescript
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = '--jsx react'
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
+" vim-js-pretty-template
+autocmd FileType typescript syn clear foldBraces
+
+" tsuquyomi
+map <silent> <F5> : TsuGeterr<CR>
+map <silent> <s-F5> : ccl<CR>
+autocmd FileType typescript setlocal completeopt-=menu
