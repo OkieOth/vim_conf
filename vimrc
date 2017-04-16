@@ -99,3 +99,7 @@ autocmd FileType typescript syn clear foldBraces
 map <silent> <F5> : TsuGeterr<CR>
 map <silent> <s-F5> : ccl<CR>
 autocmd FileType typescript setlocal completeopt-=menu
+
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
